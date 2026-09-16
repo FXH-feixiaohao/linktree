@@ -1,26 +1,54 @@
-# 非小号 · 服务导航
+## 页面内容
 
-加密货币行情与服务入口导航。此仓库由 FXH-feixiaohao 组织独立管理。
+- **标题**：非小号
+- **简介**：非小号加密货币行情平台
+- **顶部社交图标**：
+  - X (Twitter) → <https://x.com/feixiaohaocom>
+  - Email → <hello@feixiaohao.com>
 
-## 页面预览
+### 链接列表
 
-![导航页预览](docs/preview.png)
+| # | 名称 | 目标地址 |
+|---|------|----------|
+| 1 | 非小号官网 | <http://www.feixiaohao.com> |
+| 2 | 备用节点（定期更新） | <http://www.feixiaohaocc.com> |
+| 3 | APK下载（定期更新） | <https://s2.flink2.com/app/download/feixiaohao_latest.apk> |
+| 4 | iOS版下载链接 | <https://apps.apple.com/my/app/feixiaohao-cryptocurrency-ma/id1448346764> |
+| 5 | 官方邮箱 | <mailto:hello@feixiaohao.com> |
+| 6 | 官方客服 | <https://t.me/wwwfeixiaohaocom> |
+| 7 | 官方推特 | <https://x.com/feixiaohaocom> |
+| 8 | 币种收录更新 | <https://tinyurl.com/feicoin> |
+| 9 | 交易所收录更新 | <https://tinyurl.com/fxhexs> |
+| 10 | 钱包项目收录 | <https://tinyurl.com/feiwallet> |
+| 11 | 媒体KOL收录 | <https://tinyurl.com/fffmedia> |
+| 12 | 官方验证通道 | <https://www.feixiaohao.com/verification/> |
 
-## 内容
+## 部署
 
-- 常用入口：官网、备用地址
-- 下载 App：Android、iOS
-- 联系与验证：Telegram、邮箱、X、官方验证
-- 项目收录：币种、交易所、钱包、媒体 / KOL
+本项目是纯静态站点，可部署到任何静态托管平台：
 
-## 隔离范围
+- **GitHub Pages**：推送到仓库，启用 Pages 即可
+- **Cloudflare Pages / Netlify / Vercel**：拖拽目录或连接 Git 仓库
+- **自有服务器**：用任意 Web 服务器（Nginx、Caddy）指向本目录
 
-独立仓库与提交历史，单独维护导航页面和素材。
+## 使用方法
 
-## 本地查看
+### 方式一：直接打开
+双击 `index.html`，默认浏览器即可预览。
 
-直接打开 `index.html`，或在项目目录运行 `python3 -m http.server 8765 --bind 127.0.0.1` 后访问 http://127.0.0.1:8765。
+### 方式二：本地静态服务器（推荐）
+某些浏览器对 `file://` 协议下的资源加载有限制，使用本地服务器体验最佳：
 
-## 来源与维护
+```bash
+# Python 3
+cd feixiaohao-linktree
+python3 -m http.server 8000
+# 然后访问 http://localhost:8000
 
-基于用户提供的 linktree-main.zip 整理，保留原头像、图标及目标链接。链接尚未逐一验证，需手动维护；没有自动更新机制。当前未启用公开网站托管。
+# 或者 Node.js
+npx serve .
+```
+
+## 说明
+
+本副本仅用于本地备份与离线展示，所有链接仍指向外部原始地址，数据与维护由非小号官方负责。
